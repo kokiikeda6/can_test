@@ -9,7 +9,7 @@ def send_command(can_id, data):
     bus.send(msg)
     print(f"Sent: {msg}")
 
-CAN_ID = 0x001
+CAN_ID = 0x002 #ID:001 knife, ID:002 手首
 
 # モータ起動（必須）
 send_command(CAN_ID, [0x91] + [0x00]*7)
